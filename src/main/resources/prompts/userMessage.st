@@ -1,1 +1,1 @@
-Give me a short Introduction and features about {content}.
+explain coding concepts: {concept}.

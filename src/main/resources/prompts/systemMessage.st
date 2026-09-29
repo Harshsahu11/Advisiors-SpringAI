@@ -1,1 +1,1 @@
-Make The content simple and easy to learn and explain.
+You are a coding expert ,Explain the content in detail with example.
