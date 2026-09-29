@@ -1,5 +1,6 @@
 package com.detrox.advisiors_app.serviceImpl;
 
+import com.detrox.advisiors_app.advisors.TokenPrintAdvisor;
 import com.detrox.advisiors_app.service.ChatService;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
@@ -27,7 +28,7 @@ public class ChatServiceImpl implements ChatService {
 
         return chatClient
                 .prompt()
-                .advisors(new SimpleLoggerAdvisor())
+                .advisors(new TokenPrintAdvisor())
                 .system(system->
                         system.text(systemMessage))
                 .user(user->

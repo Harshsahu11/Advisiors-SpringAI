@@ -1,6 +1,7 @@
 package com.detrox.advisiors_app.config;
 
 
+import com.detrox.advisiors_app.advisors.TokenPrintAdvisor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.SafeGuardAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
@@ -18,6 +19,7 @@ public class AiConfig {
     public ChatClient chatClient(ChatClient.Builder builder){
         return builder
                 .defaultAdvisors(
+                        new TokenPrintAdvisor(),
                         new SimpleLoggerAdvisor(),
                         new SafeGuardAdvisor(List.of("games"))
                 )
